@@ -4,10 +4,25 @@
 
 /* ---------- 1. TOKENS (a paleta vive aqui, em :root) ---------- */
 :root {
-  /* cores */
-  --primary: #1a1c1f;
-  --accent:  #3f2bd4;
-  --aux:     #ffffff;
+    /* Cores principais */
+  --primary: #030A2B;
+  --primary-dark: #05051F;
+  --primary-light: #0B103B;
+
+  /* Cores de destaque */
+  --accent: #5100E8;
+  --accent-light: #7135FF;
+  --accent-dark: #240078;
+
+  /* Cores complementares */
+  --blue: #1710E8;
+  --magenta: #D000A8;
+  --pink: #F00059;
+  --coral: #FF704C;
+
+  /* Neutros */
+  --aux: #FFFFFF;
+  --black: #000000;
 
   /* derivados (mudam sozinhos se a paleta mudar) */
   --line:       color-mix(in srgb, var(--aux) 10%, transparent);
@@ -67,10 +82,14 @@ h3 { font-size: var(--fs-lg); }
   max-width: var(--container);
   margin-inline: auto;
   padding-inline: var(--s-6);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .section {
-  min-height: 100vh;               /* cada seção ocupa a tela */
+  min-height: 100vh;               
   display: flex;
   align-items: center;
   padding-block: var(--s-24);
@@ -78,6 +97,11 @@ h3 { font-size: var(--fs-lg); }
 }
 .section:first-of-type { border-top: 0; }
 
+/* ----------  CLASSES ---------- */
+
+.title {
+  font-size: 6rem;
+}
 /* ---------- 5. UTILITÁRIOS ---------- */
 
 /* cores (fundo + texto). Texto troca sozinho conforme o fundo. */
