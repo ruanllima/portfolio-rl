@@ -7,12 +7,12 @@
     /* Cores principais */
   --primary: #030A2B;
   --primary-dark: #05051F;
-  --primary-light: #0B103B;
+  --primary-light: #1b1e34;
 
   /* Cores de destaque */
   --accent: #5100E8;
   --accent-light: #7135FF;
-  --accent-dark: #240078;
+  --accent-dark: #2b1e5c;
 
 
   /* Cores complementares */
@@ -95,16 +95,25 @@ h3 { font-size: var(--fs-lg); }
   display: flex;
   align-items: center;
   padding-block: var(--s-24);
-  border-top: 1px solid var(--line);
 }
 .section:first-of-type { border-top: 0; }
 
-/* ----------  CLASSES ---------- */
+
+
+/* ============================================== CLASSES =========================================================== */
+
+.card-introduce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--coral);
+  height: 100px;
+  width: 100px;
+}
 
 .title {
   font-size: 6rem;
 }
-
 
 .hero {
     position: relative;
@@ -118,21 +127,22 @@ h3 { font-size: var(--fs-lg); }
     inset: 0;
 
     background-image: url("/media/grid.png");
-    background-size: 60% 60%;
+    background-size: 40% 40%;
 
-    opacity: 0.27;
+    opacity: 0.2;
     z-index: -1;
     pointer-events: none;
 }
+/*======================================================================================================================*/
 
 /* ---------- 5. UTILITÁRIOS ---------- */
 
-/* cores (fundo + texto). Texto troca sozinho conforme o fundo. */
 .bg-primary { background: var(--primary); color: var(--aux); }
 .bg-accent  { background: var(--accent);  color: var(--aux); }
 .bg-aux     { background: var(--aux);     color: var(--primary); }
 
 .gradient-blue { background: linear-gradient(150deg, var(--accent-dark), var(--primary-dark));}
+.gradient-blue-invert { background: linear-gradient(30deg, var(--accent-dark), var(--primary-dark));}
 
 .c-primary { color: var(--primary); }
 .c-accent  { color: var(--accent); }
